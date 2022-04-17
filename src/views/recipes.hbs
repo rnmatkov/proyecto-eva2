@@ -1,0 +1,16 @@
+{{> navbar}}
+<div class="container-recipes">
+  <div class="title-recipes">
+    <h1> Recetas</h1>
+  </div>
+  
+  {{#each articles}}
+    <div class="transparent">
+      <div class="card-body">
+        <h5 class="card-title text-white">{{this.title}}</h5>
+        <p class="card-text text-white">{{this.content}}</p><br>
+        <a href="/articles/{{this.id}}" class="button-read text-decoration-none text-dark">Leer más</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
